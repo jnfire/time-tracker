@@ -14,7 +14,7 @@ Si encuentras un error, por favor crea una *issue* proporcionando tanto detalle 
 - Capturas de pantalla o volcados de datos de ejemplo (¡asegúrate de que no contengan datos personales o sensibles!).
 
 ### Sugerir Mejoras
-¡Las sugerencias de mejoras son bienvenidas! Por favor, crea una *issue* describiendo tu idea, por qué sería útil y cómo debería funcionar en consonancia con la filosofía serverless y Sober UI.
+¡Las sugerencias de mejoras son bienvenidas! Por favor, crea una *issue* describiendo tu idea, por qué sería útil y cómo debería funcionar en consonancia con la filosofía local-first y Sober UI.
 
 ### Pull Requests
 1. Haz un *Fork* del repositorio y crea tu rama a partir de `main`.

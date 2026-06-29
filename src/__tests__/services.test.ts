@@ -33,21 +33,27 @@ describe('TaskService', () => {
     service = new TaskService(storage);
   });
 
-  it('should create and retrieve tasks', () => {
-    const task = service.createTask('PROJ-1', 'Implement tests');
-    expect(task.id).toBeDefined();
-    expect(task.ticketId).toBe('PROJ-1');
-    expect(task.description).toBe('Implement tests');
+  it('should create and retrieve tasks with auto-incrementing numeric string IDs', () => {
+    const task1 = service.createTask('PROJ-1', 'Implement tests');
+    expect(task1.id).toBe('1');
+    expect(task1.ticketId).toBe('PROJ-1');
+    expect(task1.description).toBe('Implement tests');
+
+    const task2 = service.createTask('PROJ-2', 'Refactor UI');
+    expect(task2.id).toBe('2');
 
     const list = service.getTasks();
-    expect(list.length).toBe(1);
-    expect(list[0].id).toBe(task.id);
+    expect(list.length).toBe(2);
+    const ids = list.map(t => t.id);
+    expect(ids).toContain('1');
+    expect(ids).toContain('2');
   });
 
   it('should prevent duplicate task creation and return the existing one', () => {
     const task1 = service.createTask('PROJ-1', 'Same task');
     const task2 = service.createTask('PROJ-1', 'same task '); // whitespace and case check
     expect(task1.id).toBe(task2.id);
+    expect(task1.id).toBe('1');
     expect(service.getTasks().length).toBe(1);
   });
 });
@@ -105,5 +111,20 @@ describe('TimeTrackerService', () => {
     service.stopTracking(1100);
     expect(service.isRunning(today)).toBe(false);
     expect(service.getActiveTaskRef(today)).toBeNull();
+  });
+
+  it('should associate tasks to day without adding time (creation event)', () => {
+    const today = service.getTodayStr();
+    service.associateTaskToDay(today, 'task-A', 1000);
+    
+    // Check that it's listed in calculated times with 0 seconds
+    const totals = service.getCalculatedTimePerTask(today, 1100);
+    expect(totals['task-A']).toBe(0);
+
+    // Verify duplication prevention
+    service.associateTaskToDay(today, 'task-A', 1200);
+    const record = service.getDailyRecord(today);
+    const creationEvents = record.events.filter(e => e.taskRef === 'task-A' && e.type === 'creation');
+    expect(creationEvents.length).toBe(1);
   });
 });

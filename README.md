@@ -2,9 +2,9 @@
 
 *Leer esto en [Español](README-es.md).*
 
-A fast, private, and serverless time tracking web tool designed for developers and technical users. It helps you track your daily workday duration and assign time to specific tasks.
+A fast, local-first time tracking web tool designed for developers and technical users. It helps you track your daily workday duration and assign time to specific tasks.
 
-All processing is done locally in your browser, ensuring **total privacy** for your data. Built with **Vue 3 (Composition API)**, **TypeScript**, and a clean, framework-agnostic business logic core.
+All processing is done locally in your browser, ensuring **complete control** of your data (Local-First). Built with **Vue 3 (Composition API)**, **TypeScript**, and a clean, framework-agnostic business logic core.
 
 ## ✨ Key Features
 - **Workday Totalizer:** The large timer displays the total accumulated time for the selected day.

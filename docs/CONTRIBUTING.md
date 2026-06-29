@@ -14,7 +14,7 @@ If you find a bug, please open an issue providing as much detail as possible:
 - Screenshots or example data dumps (make sure they contain no personal or sensitive data!).
 
 ### Suggesting Enhancements
-Enhancements suggestions are welcome! Please open an issue describing your idea, why it would be useful, and how it should work under the serverless and Sober UI philosophy.
+Enhancements suggestions are welcome! Please open an issue describing your idea, why it would be useful, and how it should work under the local-first and Sober UI philosophy.
 
 ### Pull Requests
 1. Fork the repo and create your branch from `main`.

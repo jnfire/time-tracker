@@ -2,9 +2,9 @@
 
 *Read this in [English](README.md).*
 
-Una herramienta web rápida, privada y sin servidor para el seguimiento del tiempo de trabajo diseñada para desarrolladores y usuarios técnicos. Permite medir el tiempo global de tu jornada diaria y asignar bloques de tiempo a tareas específicas.
+Una herramienta web rápida y local-first para el seguimiento del tiempo de trabajo diseñada para desarrolladores y usuarios técnicos. Permite medir el tiempo global de tu jornada diaria y asignar bloques de tiempo a tareas específicas.
 
-Todo el procesamiento se realiza localmente en tu navegador web, lo que garantiza una **privacidad total** de tus datos. Construida con **Vue 3 (Composition API)**, **TypeScript**, y un núcleo de lógica de negocio agnóstico al framework.
+Todo el procesamiento se realiza localmente en tu navegador web, garantizando un **control total** de tus datos (Local-First). Construida con **Vue 3 (Composition API)**, **TypeScript**, y un núcleo de lógica de negocio agnóstico al framework.
 
 ## ✨ Características Principales
 - **Totalizador de Jornada:** El temporizador grande en pantalla muestra el tiempo acumulado de todo el día seleccionado.
