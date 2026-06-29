@@ -1,0 +1,40 @@
+{
+  "header": {
+    "title": "Time Tracker",
+    "subtitle": "Controla el tiempo de tu jornada y tus tareas de forma sencilla. 100% privado, sin procesamiento en servidor, código abierto.",
+    "badges": {
+      "opensource": "Open Source",
+      "privacy": "Privacidad Local",
+      "serverless": "Sin Servidor"
+    }
+  },
+  "tracker": {
+    "taskId": "ID de la Tarea",
+    "taskIdPlaceholder": "ej. WEB-123",
+    "description": "Descripción",
+    "descriptionPlaceholder": "ej. Resolver bug de login",
+    "btnStart": "Iniciar",
+    "btnStop": "Pausar",
+    "selectOrCreate": "Seleccionar o crear tarea",
+    "new": "Añadir Tarea"
+  },
+  "summary": {
+    "title": "Resumen del Día",
+    "taskHeader": "Tarea",
+    "timeHeader": "Tiempo",
+    "noRecords": "No hay registros para este día.",
+    "totalTime": "Tiempo total trabajado",
+    "editPast": "Añadir registro manual",
+    "btnSave": "Guardar",
+    "btnCancel": "Cancelar",
+    "btnDelete": "Eliminar",
+    "lblDuration": "Duración"
+  },
+  "date": {
+    "label": "Fecha Seleccionada:"
+  },
+  "export": {
+    "btnExport": "Exportar Registros (JSON)",
+    "success": "Registros exportados correctamente"
+  }
+}

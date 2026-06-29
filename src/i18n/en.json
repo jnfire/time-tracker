@@ -1,0 +1,40 @@
+{
+  "header": {
+    "title": "Time Tracker",
+    "subtitle": "Track your workday and task times easily. 100% private, serverless processing, open source.",
+    "badges": {
+      "opensource": "Open Source",
+      "privacy": "Local Privacy",
+      "serverless": "Serverless"
+    }
+  },
+  "tracker": {
+    "taskId": "Task ID",
+    "taskIdPlaceholder": "e.g. WEB-123",
+    "description": "Description",
+    "descriptionPlaceholder": "e.g. Resolve login bug",
+    "btnStart": "Start",
+    "btnStop": "Pause",
+    "selectOrCreate": "Select or create task",
+    "new": "Add Task"
+  },
+  "summary": {
+    "title": "Daily Summary",
+    "taskHeader": "Task",
+    "timeHeader": "Time",
+    "noRecords": "No logs recorded for this day.",
+    "totalTime": "Total time worked",
+    "editPast": "Add manual log",
+    "btnSave": "Save",
+    "btnCancel": "Cancel",
+    "btnDelete": "Delete",
+    "lblDuration": "Duration"
+  },
+  "date": {
+    "label": "Selected Date:"
+  },
+  "export": {
+    "btnExport": "Export Logs (JSON)",
+    "success": "Logs successfully exported"
+  }
+}
