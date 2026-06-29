@@ -34,8 +34,8 @@
     "label": "Fecha Seleccionada:"
   },
   "export": {
-    "btnExport": "Exportar Registros (JSON)",
-    "btnImport": "Importar Registros (JSON)",
+    "btnExport": "Exportar Registros",
+    "btnImport": "Importar Registros",
     "importConfirm": "Esta acción borrará y reemplazará toda la información de la aplicación en este navegador con la del archivo importado. ¿Deseas continuar?",
     "importErrorInvalid": "El archivo seleccionado no es un archivo de copia de seguridad válido de Time Tracker.",
     "success": "Registros exportados correctamente"

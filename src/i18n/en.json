@@ -34,8 +34,8 @@
     "label": "Selected Date:"
   },
   "export": {
-    "btnExport": "Export Logs (JSON)",
-    "btnImport": "Import Logs (JSON)",
+    "btnExport": "Export Logs",
+    "btnImport": "Import Logs",
     "importConfirm": "This action will overwrite and replace all local data with the imported backup. Do you wish to continue?",
     "importErrorInvalid": "The selected file is not a valid Time Tracker backup file.",
     "success": "Logs successfully exported"
