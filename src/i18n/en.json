@@ -1,11 +1,11 @@
 {
   "header": {
     "title": "Time Tracker",
-    "subtitle": "Track your workday and task times easily. 100% private, serverless processing, open source.",
+    "subtitle": "Track your workday and task times easily. Local-first, no registration, and open source.",
     "badges": {
       "opensource": "Open Source",
-      "privacy": "Local Privacy",
-      "serverless": "Serverless"
+      "privacy": "Local-First",
+      "serverless": "No Registration"
     }
   },
   "tracker": {
@@ -35,6 +35,14 @@
   },
   "export": {
     "btnExport": "Export Logs (JSON)",
+    "btnImport": "Import Logs (JSON)",
+    "importConfirm": "This action will overwrite and replace all local data with the imported backup. Do you wish to continue?",
+    "importErrorInvalid": "The selected file is not a valid Time Tracker backup file.",
     "success": "Logs successfully exported"
+  },
+  "footer": {
+    "text": "Designed for developers. Your data belongs to you: fast, open-source tools running directly on your device.",
+    "source": "View Source Code",
+    "license": "GPL-3.0 License"
   }
 }

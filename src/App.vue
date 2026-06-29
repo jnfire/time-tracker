@@ -3,6 +3,7 @@
 import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import AppHeader from './ui/components/AppHeader.vue';
+import AppFooter from './ui/components/AppFooter.vue';
 import DateSelector from './ui/components/DateSelector.vue';
 import ActiveTracker from './ui/components/ActiveTracker.vue';
 import ExportActions from './ui/components/ExportActions.vue';
@@ -15,7 +16,6 @@ const { t, locale } = useI18n();
 const {
   selectedDate,
   tasksList,
-  datesWithRecords,
   isRunning,
   activeTaskId,
   calculatedTimes,
@@ -85,7 +85,6 @@ const handleSaveCorrection = (minutes: number) => {
     <main class="main-content">
       <DateSelector
         v-model="selectedDate"
-        :datesWithRecords="datesWithRecords"
         :label="t('date.label')"
         :maxDate="todayStr"
       />
@@ -122,21 +121,10 @@ const handleSaveCorrection = (minutes: number) => {
       @save="handleSaveCorrection"
     />
 
-    <footer class="app-footer">
-      <p>{{ t('header.subtitle') }}</p>
-    </footer>
+    <AppFooter />
   </div>
 </template>
 
 <style>
 @import './style.css';
-
-.app-footer {
-  text-align: center;
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border-color);
-  color: var(--text-muted);
-  font-size: 0.85rem;
-}
 </style>

@@ -28,3 +28,56 @@ Houses the dictionaries (`en.json`, `es.json`) and the internationalization plug
 
 ### 4. `src/__tests__/` (Testing)
 Contains Vitest automated unit tests ensuring the stability of Core duration and time math calculations.
+
+## Backup File Structure (JSON)
+
+The backup file generated during export and required for import consolidates all application `localStorage` data into a single flat JSON object:
+
+```json
+{
+  "mini_tools_time_tasks": {
+    "1": {
+      "id": "1",
+      "ticketId": "WEB-123",
+      "description": "Resolve login bug",
+      "createdAt": 1690000000
+    },
+    "2": {
+      "id": "2",
+      "ticketId": "WEB-124",
+      "description": "Review Pull Requests",
+      "createdAt": 1690003600
+    }
+  },
+  "mini_tools_time_2026-06-29": {
+    "events": [
+      {
+        "timestamp": 1690000000,
+        "type": "creation",
+        "taskRef": "1"
+      },
+      {
+        "timestamp": 1690001000,
+        "type": "start",
+        "taskRef": "1",
+        "isManualEdit": false
+      },
+      {
+        "timestamp": 1690005000,
+        "type": "correction",
+        "taskRef": "1",
+        "correctionSeconds": 900,
+        "isManualEdit": true
+      },
+      {
+        "timestamp": 1690007200,
+        "type": "stop",
+        "isManualEdit": false
+      }
+    ]
+  }
+}
+```
+
+*   **`mini_tools_time_tasks`**: Global dictionary of tasks indexed by their string-based numeric ID.
+*   **`mini_tools_time_YYYY-MM-DD`**: Array of events for a specific date. Events refer to the task using `taskRef`. `'correction'` events can hold positive or negative adjustment offsets via `correctionSeconds`.

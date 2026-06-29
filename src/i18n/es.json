@@ -1,11 +1,11 @@
 {
   "header": {
     "title": "Time Tracker",
-    "subtitle": "Controla el tiempo de tu jornada y tus tareas de forma sencilla. 100% privado, sin procesamiento en servidor, código abierto.",
+    "subtitle": "Controla el tiempo de tu jornada y tus tareas de forma sencilla. Local-first, sin registro y de código abierto.",
     "badges": {
       "opensource": "Open Source",
-      "privacy": "Privacidad Local",
-      "serverless": "Sin Servidor"
+      "privacy": "Local-First",
+      "serverless": "Sin Registro"
     }
   },
   "tracker": {
@@ -35,6 +35,14 @@
   },
   "export": {
     "btnExport": "Exportar Registros (JSON)",
+    "btnImport": "Importar Registros (JSON)",
+    "importConfirm": "Esta acción borrará y reemplazará toda la información de la aplicación en este navegador con la del archivo importado. ¿Deseas continuar?",
+    "importErrorInvalid": "El archivo seleccionado no es un archivo de copia de seguridad válido de Time Tracker.",
     "success": "Registros exportados correctamente"
+  },
+  "footer": {
+    "text": "Diseñado para desarrolladores. Tus datos te pertenecen: herramientas rápidas y de código abierto que se ejecutan directamente en tu dispositivo.",
+    "source": "Ver Código Fuente",
+    "license": "Licencia GPL-3.0"
   }
 }

@@ -24,7 +24,60 @@ Esta carpeta contiene código puro en TypeScript y es completamente independient
   - **`ExportActions.vue`**: Acción de exportación de base de datos a formato JSON.
 
 ### 3. `src/i18n/` (Internacionalización)
-Contiene las traducciones (`en.json`, `es.json`) y la configuración del plugin de internacionalización.
+Contiene los diccionarios (`en.json`, `es.json`) y la configuración de `vue-i18n` para soportar múltiples idiomas sin problemas.
 
 ### 4. `src/__tests__/` (Pruebas)
 Contiene la suite de tests automatizados de Vitest para garantizar la estabilidad de la lógica matemática de cálculo e intervalos en el core.
+
+## Estructura del Fichero de Backup (JSON)
+
+El archivo generado durante la exportación y requerido para la importación consolida toda la base de datos de `localStorage` de la aplicación en un único objeto plano con el siguiente formato:
+
+```json
+{
+  "mini_tools_time_tasks": {
+    "1": {
+      "id": "1",
+      "ticketId": "WEB-123",
+      "description": "Resolver bug de login",
+      "createdAt": 1690000000
+    },
+    "2": {
+      "id": "2",
+      "ticketId": "WEB-124",
+      "description": "Revisar Pull Requests",
+      "createdAt": 1690003600
+    }
+  },
+  "mini_tools_time_2026-06-29": {
+    "events": [
+      {
+        "timestamp": 1690000000,
+        "type": "creation",
+        "taskRef": "1"
+      },
+      {
+        "timestamp": 1690001000,
+        "type": "start",
+        "taskRef": "1",
+        "isManualEdit": false
+      },
+      {
+        "timestamp": 1690005000,
+        "type": "correction",
+        "taskRef": "1",
+        "correctionSeconds": 900,
+        "isManualEdit": true
+      },
+      {
+        "timestamp": 1690007200,
+        "type": "stop",
+        "isManualEdit": false
+      }
+    ]
+  }
+}
+```
+
+*   **`mini_tools_time_tasks`**: Diccionario global de tareas indexadas por su identificador numérico de tipo string.
+*   **`mini_tools_time_YYYY-MM-DD`**: Array de eventos para una fecha específica. Los eventos del flujo temporal hacen referencia a la tarea por su ID (`taskRef`). Los eventos `'correction'` pueden contener ajustes positivos o negativos mediante `correctionSeconds`.

@@ -4,7 +4,6 @@ import { computed } from 'vue';
 
 const props = defineProps<{
   modelValue: string;
-  datesWithRecords: string[];
   label: string;
   maxDate: string;
 }>();
@@ -20,10 +19,6 @@ const selectedDate = computed({
       emit('update:modelValue', val);
     }
   }
-});
-
-const hasRecords = computed(() => {
-  return props.datesWithRecords.includes(props.modelValue);
 });
 
 const isMaxDate = computed(() => {
@@ -57,10 +52,8 @@ const changeDay = (offset: number) => {
           type="date" 
           v-model="selectedDate" 
           class="input-element date-input"
-          :class="{ 'has-records': hasRecords }"
           :max="maxDate"
         />
-        <div v-if="hasRecords" class="records-dot" title="Has logs"></div>
       </div>
       <button type="button" class="btn-secondary nav-btn" @click="changeDay(1)" :disabled="isMaxDate">
         &rarr;
@@ -104,20 +97,5 @@ const changeDay = (offset: number) => {
 .date-input {
   text-align: center;
   font-weight: 500;
-}
-
-.date-input.has-records {
-  border-color: var(--success-color);
-}
-
-.records-dot {
-  position: absolute;
-  bottom: 4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: var(--success-color);
 }
 </style>

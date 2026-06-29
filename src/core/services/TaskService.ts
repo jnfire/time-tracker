@@ -53,8 +53,12 @@ export class TaskService {
       return existing;
     }
 
+    // Auto-increment numeric ID
+    const ids = Object.keys(this.tasks).map(id => parseInt(id, 10)).filter(id => !isNaN(id));
+    const nextId = ids.length > 0 ? Math.max(...ids) + 1 : 1;
+
     const newTask: Task = {
-      id: crypto.randomUUID(),
+      id: String(nextId),
       ticketId: cleanedTicket,
       description: cleanedDescription,
       createdAt: Math.floor(Date.now() / 1000)
