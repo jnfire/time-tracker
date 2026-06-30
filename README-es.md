@@ -25,7 +25,10 @@ Todo el procesamiento se realiza localmente en tu navegador web, garantizando un
 El proyecto separa estrictamente la lógica de negocio de la capa de vista para facilitar la legibilidad y futura migración a librerías comunes. Puedes ver los detalles en [docs/ARCHITECTURE-es.md](docs/ARCHITECTURE-es.md).
 
 ## 🚀 Cómo ejecutarlo localmente
-Consulta nuestra guía detallada en [docs/CONTRIBUTING-es.md](docs/CONTRIBUTING-es.md).
+```sh
+npm install
+npm run dev
+```
 
 ## 🗺️ Roadmap del Proyecto
 Próximas características planificadas para desarrollo:
@@ -36,4 +39,4 @@ Próximas características planificadas para desarrollo:
 - [ ] **Borrado Automático de Historial:** Eliminación automática programable de registros locales para liberar espacio en el navegador.
 
 ## 📄 Licencia
-Este proyecto está licenciado bajo la **GNU General Public License v3.0 (GPL-3.0)**. Consulta el archivo `LICENSE` para más detalles.
+Este proyecto es propietario y tiene todos los derechos reservados por Javier Nicolás Pérez Mesa. Se publica exclusivamente con fines de revisión de portafolio, auditoría de código y uso estrictamente personal. Consulta el archivo `LICENSE` para más detalles.

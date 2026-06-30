@@ -1,9 +1,9 @@
 {
   "header": {
     "title": "Time Tracker",
-    "subtitle": "Controla el tiempo de tu jornada y tus tareas de forma sencilla. Local-first, sin registro y de código abierto.",
+    "subtitle": "Controla el tiempo de tu jornada y tus tareas de forma sencilla. Local-first y sin registro.",
     "badges": {
-      "opensource": "Open Source",
+      "auditable": "Auditable",
       "privacy": "Local-First",
       "serverless": "Sin Registro"
     }
@@ -41,8 +41,8 @@
     "success": "Registros exportados correctamente"
   },
   "footer": {
-    "text": "Desarrollo local-first y open-source. Tus datos, tu control.",
+    "text": "Desarrollo local-first para revisión de portafolio y uso personal. Tus datos, tu control.",
     "source": "Ver Código Fuente",
-    "license": "Licencia GPL-3.0"
+    "license": "Derechos Reservados"
   }
 }

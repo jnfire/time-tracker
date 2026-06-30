@@ -35,5 +35,11 @@ Future features planned for development:
 - [ ] **Past Register Limitations:** Set configurable limits to avoid editing timestamps beyond a certain date.
 - [ ] **Auto-deletion Policy:** Configurable automatic removal of local history logs to free browser storage.
 
+## 🚀 How to Run Locally
+```sh
+npm install
+npm run dev
+```
+
 ## 📄 License
-This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)**. See the `LICENSE` file for more details.
+This project is proprietary and all rights are reserved by Javier Nicolás Pérez Mesa. It is published exclusively for portfolio review, code audit, and personal use. See the `LICENSE` file for details.

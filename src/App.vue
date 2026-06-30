@@ -48,7 +48,7 @@ const languages = [
 const headerTitle = computed(() => t('header.title'));
 const headerSubtitle = computed(() => t('header.subtitle'));
 const headerBadges = computed(() => [
-  t('header.badges.opensource'),
+  t('header.badges.auditable'),
   t('header.badges.privacy'),
   t('header.badges.serverless')
 ]);
