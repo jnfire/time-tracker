@@ -82,6 +82,7 @@ const changeDay = (offset: number) => {
 .nav-btn {
   padding: 0.75rem 1rem;
   font-size: 1.1rem;
+  flex-shrink: 0;
 }
 
 .nav-btn:disabled {
@@ -92,10 +93,43 @@ const changeDay = (offset: number) => {
 .date-input-wrapper {
   position: relative;
   flex: 1;
+  min-width: 0;
 }
 
 .date-input {
   text-align: center;
   font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .date-selector {
+    max-width: 100%;
+    gap: 0.35rem;
+  }
+
+  .nav-btn {
+    padding: 0.6rem 0.75rem;
+    font-size: 1rem;
+  }
+
+  .date-input {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .date-selector {
+    gap: 0.25rem;
+  }
+
+  .nav-btn {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .date-input {
+    font-size: 0.85rem;
+    padding: 0.75rem 0.5rem;
+  }
 }
 </style>
