@@ -24,9 +24,6 @@ All processing is done locally in your browser, ensuring **complete control** of
 ## 📁 Project Architecture
 The project strictly separates business logic from the view layer to ensure readability and easy migration to shared libraries. You can check the details in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
-## 🚀 How to Run Locally
-Please see our detailed guide in [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
-
 ## 🗺️ Project Roadmap
 Future features planned for development:
 - [ ] **Cloud Sychronization:** Sychronize local logs with a secure cloud database (monetizable backoffice feature).
