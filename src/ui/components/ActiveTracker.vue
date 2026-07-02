@@ -97,11 +97,11 @@ const getTaskDetails = (id: string) => {
             <span class="task-desc">{{ getTaskDetails(taskId).description }}</span>
           </div>
 
-          <div class="task-actions" @click.stop>
+          <div class="task-actions">
             <span class="task-duration">{{ formatTimeFriendly(time) }}</span>
-            <button 
-              class="btn-secondary edit-time-btn" 
-              @click="$emit('openEditTimeModal', taskId)"
+            <button
+              class="btn-secondary edit-time-btn"
+              @click.stop="$emit('openEditTimeModal', taskId)"
             >
               Editar
             </button>
